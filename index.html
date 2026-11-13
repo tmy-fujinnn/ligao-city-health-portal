@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ligao City Health Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0e8a8c"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#fff"/></svg>Ligao City Health Portal</a>
+<nav aria-label="Main"><a href="#home">Home</a><a href="#directory">Facilities</a><a href="#how">How it works</a><a href="#demo">Try the portal</a></nav>
+</div></header>
+
+<section id="home" class="view">
+<div class="hero"><div class="in">
+<div>
+<h1>One health record that follows you across Ligao.</h1>
+<p>From your barangay health station to the hospital, licensed health workers see the records you allow, so you stop repeating tests, stories and trips.</p>
+<a class="btn" href="#demo">Try the portal</a> <a class="btn out" href="#how">How it works</a>
+</div>
+<div class="glass"><div class="chain">
+<div><i>1</i>Barangay station checks you</div>
+<div><i>2</i>Referral sent through the portal</div>
+<div><i>3</i>Hospital opens your record first</div>
+<div><i>4</i>Results return to your barangay</div>
+</div></div>
+</div>
+<svg class="m" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150V118C160 108 300 100 420 70C500 50 560 20 600 6C640 20 700 50 780 70C900 100 1040 108 1200 118V150Z" fill="var(--bg)" opacity=".18"/><path d="M0 150V136C200 128 360 118 470 92C540 74 580 48 600 38C620 48 660 74 730 92C840 118 1000 128 1200 136V150Z" fill="var(--bg)"/></svg>
+</div>
+<div class="wrap" style="padding-top:1rem">
+<h2>Built for the way Ligao gets care</h2>
+<div class="grid" id="feats"></div>
+<div class="panel"><h3>For residents without steady internet</h3><p>Text-message access lets residents check alerts, view appointment status and book a visit from any basic phone. Health stations can keep working offline and sync when the signal returns. Try it in the portal demo.</p><a class="btn sm" href="#demo">Open demo</a></div>
+<p class="muted" style="margin-top:1.5rem">Design prototype for a Health Information Exchange proposal. All people, records and numbers are made-up sample data.</p>
+</div>
+</section>
+
+<section id="directory" class="view"><div class="wrap">
+<h2>Find a health facility</h2>
+<p>Every facility keeps its own records. Public facilities join the portal in Phase 1 and private ones in Phase 2, so a visit at one is visible to the next, with your consent.</p>
+<div class="filters"><div><label for="q">Search</label><input id="q" placeholder="Name, barangay or service"></div><div><label for="t">Type</label><select id="t"></select></div></div>
+<div class="fac" id="dres"></div>
+<p class="muted" style="margin-top:1rem">Where hours or services are not listed, they still need to be confirmed with the facility.</p>
+</div></section>
+
+<section id="demo" class="view"><div class="wrap">
+<h2>Try the portal</h2>
+<p>Sign in as any role. Once inside, switch roles to follow one referral from barangay to hospital to patient.</p>
+<div class="roles" id="roles"></div>
+<div id="stage"></div>
+</div></section>
+
+<section id="how" class="view"><div class="wrap">
+<h2>How the portal works</h2>
+<p>Every user follows the same five stages. What they can do at each depends on their role.</p>
+<div class="chain" style="margin-bottom:2.2rem">
+<div><i>1</i><span><b>Register and verify.</b> Residents sign up with a valid ID and mobile number, then confirm a one-time code. Health workers are verified by the City Health Office.</span></div>
+<div><i>2</i><span><b>Give consent.</b> The resident chooses which facilities may view their record. Emergency access is allowed and always logged.</span></div>
+<div><i>3</i><span><b>Receive care.</b> The health worker or doctor opens the record, adds the visit, orders tests or sends a referral.</span></div>
+<div><i>4</i><span><b>Share the update.</b> The visit is saved and linked facilities see it right away.</span></div>
+<div><i>5</i><span><b>Follow up.</b> The resident gets reminders and results. Anonymous counts feed the city dashboard.</span></div>
+</div>
+<h3>What each role can do</h3>
+<div class="scroll panel"><table>
+<thead><tr><th>Role</th><th>Can view</th><th>Can do</th></tr></thead>
+<tbody>
+<tr><td>Resident</td><td>Own record and appointments</td><td>Book, manage consent, read alerts, use SMS</td></tr>
+<tr><td>Barangay health worker</td><td>Patients in their barangay</td><td>Register patients, record vitals, send referrals</td></tr>
+<tr><td>Doctor / nurse</td><td>Records of consenting patients</td><td>Accept referrals, add notes, order tests</td></tr>
+<tr><td>City Health Office</td><td>Anonymous city-wide counts</td><td>Post alerts, verify facilities, review audit logs</td></tr>
+</tbody></table></div>
+<h3 style="margin-top:2.2rem">Behind the portal: a hybrid exchange</h3>
+<p>Each facility keeps its own records. The portal holds a central index of who has records where, then fetches the needed data from the source facility on request. This keeps data close to its owner while giving one view to the user.</p>
+<h3 style="margin-top:2rem">Privacy and security</h3>
+<div class="grid" id="priv"></div>
+</div></section>
+
+<footer>Ligao City Health Portal. Prototype for a Health Information Exchange proposal. Sample data only.</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
